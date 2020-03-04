@@ -5,7 +5,7 @@ import logo from '../images/elnopal.png';
 
 import {Colors} from '../constants/Colors';
 
-const Layout = ({navigation, children}) =>{
+const Layout = ({children}) =>{
     
     return(
        <View style={styles.background}>

@@ -11,9 +11,9 @@ import Categories from '../components/Categories';
 const StartScreen = ({navigation}) =>{
     
     return(
-        <Layout navigation={navigation}>
+        <Layout>
             <BannerImage/>
-            <Categories/>
+            <Categories navigation={navigation}/>
         </Layout>
         
     )

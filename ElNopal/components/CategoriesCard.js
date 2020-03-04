@@ -4,9 +4,13 @@ import {View, Text, Image, ImageBackground, TouchableOpacity, StyleSheet} from '
 
 
 
-const CategoriesCard = ({itemData}) =>{
+const CategoriesCard = ({itemData, navigation}) =>{
     return(
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={() =>{
+            navigation.push('CategoryMenu',{
+                categoryId: itemData
+            });
+        }}>
             <ImageBackground style={styles.cardImage} source={itemData.item.image}>
                 <Text style={styles.text}>{itemData.item.title}</Text>
             </ImageBackground>

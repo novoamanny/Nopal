@@ -6,10 +6,10 @@ import {CATEGORIES} from '../data/category-data';
 
 import CategoriesCard from '../components/CategoriesCard';
 
-const Categories = () =>{
+const Categories = ({navigation}) =>{
 
     const renderDataHandle = (itemData) =>{
-        return <CategoriesCard itemData={itemData}/>
+        return <CategoriesCard itemData={itemData} navigation={navigation}/>
     }
 
     return(
