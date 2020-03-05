@@ -8,7 +8,7 @@ const CategoriesCard = ({itemData, navigation}) =>{
     return(
         <TouchableOpacity style={styles.card} onPress={() =>{
             navigation.push('CategoryMenu',{
-                categoryId: itemData
+                categoryId: itemData.item.id
             });
         }}>
             <ImageBackground style={styles.cardImage} source={itemData.item.image}>
