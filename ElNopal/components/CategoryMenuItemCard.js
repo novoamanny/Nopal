@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, FlatList, StyleSheet} from 'react-native';
+import {View, Text, FlatList, StyleSheet, ScrollView} from 'react-native';
 
 import {MENUITEMS} from '../data/menuItem-data';
 
@@ -8,32 +8,40 @@ import MenuItem from './MenuItem'
 
 const CategoryMenuItemCard = ({cat, navigation}) =>{
     
+    
 
     const renderMenuItem = (itemData) =>{
 
+        
+        
+        
         if(cat === 'c1'){
-            if(itemData.item.category === 'App'){
-                return <MenuItem  item={itemData.item} navigation={navigation}/>
+            
+            if(itemData.category === 'App'){
+                console.log(itemData)
+                return <MenuItem  item={itemData} navigation={navigation}/>
             }
         }
         if(cat === 'c2'){
-            if(itemData.item.category === 'SS'){
-                return <MenuItem  item={itemData.item} navigation={navigation}/>
+            if( itemData.category=== 'SS'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
             }
         }
         if(cat === 'c3'){
-            if(itemData.item.category === 'Ench'){
-                return <MenuItem  item={itemData.item } navigation={navigation}/>
+            
+            if(itemData.category === 'Ench'){
+                
+                return <MenuItem  item={itemData } navigation={navigation}/>
             }
         }
         if(cat === 'c4'){
-            if(itemData.item.category === 'Faj'){
-                return <MenuItem  item={itemData.item} navigation={navigation}/>
+            if(itemData.category === 'Faj'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
             }
         }
         if(cat === 'c5'){
-            if(itemData.item.category === 'Ptll'){
-                return <MenuItem  item={itemData.item} navigation={navigation}/>
+            if(itemData.category=== 'Ptll'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
             }
         }
         
@@ -41,9 +49,12 @@ const CategoryMenuItemCard = ({cat, navigation}) =>{
     }
 
     return(
-        <View style={styles.container}>
-            <FlatList data={MENUITEMS} renderItem={renderMenuItem} numColumns={1}/>
-        </View>
+        <ScrollView style={styles.container}>
+            {/* <FlatList data={MENUITEMS} renderItem={renderMenuItem} numColumns={1}/> */}
+            {MENUITEMS.map((item) =>{
+                return renderMenuItem(item);
+            })}
+        </ScrollView>
     )
 }
 

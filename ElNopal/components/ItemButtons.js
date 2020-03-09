@@ -64,7 +64,7 @@ const ItemButtons = ({ navigation, itemID, itemName}) =>{
             </View>
 
 
-            <View>
+            <View style={{marginTop: 10}}>
                     
                 <ItemConfirmBtns color={Colors.secondary} text={'Add To Order'} handle={addToOrder}/>
                 <ItemConfirmBtns color={'red'} text={'Cancel Order'} handle={cancelItemChoice}/>

@@ -7,7 +7,7 @@ const ItemConfirmBtns = ({color, text, handle}) =>{
 
 
     return(
-        <TouchableOpacity style={{backgroundColor: color, marginTop: 10, padding: 10,}} onPress={() => handle()}>
+        <TouchableOpacity style={{backgroundColor: color, marginTop: 5, padding: 10,}} onPress={() => handle()}>
             <Text style={{alignSelf: 'center', color: '#fff', fontWeight: 'bold', fontSize: 20}}>{text}</Text>
         </TouchableOpacity>
     )
