@@ -3,12 +3,16 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import Layout from '../components/Layout';
 
+import {HeaderButtons, Item} from 'react-navigation-header-buttons';
+
 import {Colors} from '../constants/Colors';
 
 import ItemDesc from '../components/ItemDesc';
 import ItemImage from '../components/ItemImage';
 import ItemPrice from '../components/ItemPrice';
 import ItemButtons from '../components/ItemButtons';
+
+import CustomHeaderButton from '../components/CustomHeaderButton'
 
 const MenuItemScreen = ({navigation}) =>{
 
@@ -38,7 +42,8 @@ MenuItemScreen.navigationOptions = ({navigation}) =>{
           headerStyle:{
               backgroundColor: Colors.secondary
           },
-          headerTintColor: '#fff'
+          headerTintColor: '#fff',
+          headerRight: () => <HeaderButtons HeaderButtonComponent={CustomHeaderButton} ><Item iconName='ios-star' onPress={() => console.log('FAV')}/></HeaderButtons>
         };
     }
 }

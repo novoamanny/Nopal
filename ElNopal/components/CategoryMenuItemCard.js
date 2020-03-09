@@ -44,6 +44,31 @@ const CategoryMenuItemCard = ({cat, navigation}) =>{
                 return <MenuItem  item={itemData} navigation={navigation}/>
             }
         }
+        if(cat === 'c6'){
+            if(itemData.category=== 'Esp'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
+            }
+        }
+        if(cat === 'c7'){
+            if(itemData.category=== 'LS'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
+            }
+        }
+        if(cat === 'c8'){
+            if(itemData.category=== 'Veg'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
+            }
+        }
+        if(cat === 'c9'){
+            if(itemData.category=== 'BD'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
+            }
+        }
+        if(cat === 'c9'){
+            if(itemData.category=== 'postres'){
+                return <MenuItem  item={itemData} navigation={navigation}/>
+            }
+        }
         
         return null
     }
@@ -60,7 +85,7 @@ const CategoryMenuItemCard = ({cat, navigation}) =>{
 
 const styles = StyleSheet.create({
     container:{
-        marginBottom: 20
+        
         
     }
 })

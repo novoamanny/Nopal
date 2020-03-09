@@ -9,6 +9,7 @@ import {CATEGORIES} from '../data/category-data';
 
 import {Colors} from '../constants/Colors';
 
+
 const CategoryMenuScreen = ({navigation}) =>{
     
     
