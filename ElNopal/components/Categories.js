@@ -22,7 +22,7 @@ const Categories = ({navigation}) =>{
 
 const styles = StyleSheet.create({
     buttons:{
-        marginTop: 10,
+        
         marginBottom: 280
     },
     image:{

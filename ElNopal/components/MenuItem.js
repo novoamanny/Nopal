@@ -4,17 +4,20 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 import {Colors} from '../constants/Colors';
 
-const MenuItem = ({item}) =>{
-
+const MenuItem = ({item, navigation}) =>{
+    
     const Item = (
-        <TouchableOpacity style={styles.menuItemContainer}>
+        <TouchableOpacity style={styles.menuItemContainer} onPress={() => {
+            navigation.push('MenuItem', {item: item});
+        }}>
             <Image style={styles.image} source={require('../images/desert.jpeg')}/>
             <View style={''}>
                 <Text style={styles.text}>{item.title}</Text>
             </View>
-            <View>
+            {/* <View>
                 <Text style={styles.textDesc}>{item.desc}</Text>
             </View>
+            */}
             <View>
                 <Text style={styles.textPrice}>{item.price}</Text>
             </View>
@@ -29,18 +32,17 @@ return Item;
 
 const styles = StyleSheet.create({
     menuItemContainer:{
-        marginVertical: 10,
-        marginHorizontal: 20,
-        padding: 10,
+        
+        marginVertical: 1,
         backgroundColor: Colors.secondary,
-        borderRadius: 15,
+        
         
     },
     image:{
-        width: 340,
+        width: '100%',
         height: 170,
-        borderRadius: 15,
-        alignSelf: 'center'
+        
+        
     },
     text: {
         alignSelf: 'center',

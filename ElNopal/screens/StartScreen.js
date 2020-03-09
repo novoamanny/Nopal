@@ -23,7 +23,7 @@ const StartScreen = ({navigation}) =>{
 StartScreen.navigationOptions = {
     headerTitle: () => <HeaderImage/>,
     headerStyle:{
-        backgroundColor: '#ff8c1a'
+        backgroundColor: '#00b300'
     }
     
 }

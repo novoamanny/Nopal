@@ -6,34 +6,34 @@ import {MENUITEMS} from '../data/menuItem-data';
 
 import MenuItem from './MenuItem'
 
-const CategoryMenuItemCard = ({cat}) =>{
+const CategoryMenuItemCard = ({cat, navigation}) =>{
     
 
     const renderMenuItem = (itemData) =>{
 
         if(cat === 'c1'){
             if(itemData.item.category === 'App'){
-                return <MenuItem  item={itemData.item}/>
+                return <MenuItem  item={itemData.item} navigation={navigation}/>
             }
         }
         if(cat === 'c2'){
             if(itemData.item.category === 'SS'){
-                return <MenuItem  item={itemData.item}/>
+                return <MenuItem  item={itemData.item} navigation={navigation}/>
             }
         }
         if(cat === 'c3'){
             if(itemData.item.category === 'Ench'){
-                return <MenuItem  item={itemData.item}/>
+                return <MenuItem  item={itemData.item } navigation={navigation}/>
             }
         }
         if(cat === 'c4'){
             if(itemData.item.category === 'Faj'){
-                return <MenuItem  item={itemData.item}/>
+                return <MenuItem  item={itemData.item} navigation={navigation}/>
             }
         }
         if(cat === 'c5'){
             if(itemData.item.category === 'Ptll'){
-                return <MenuItem  item={itemData.item}/>
+                return <MenuItem  item={itemData.item} navigation={navigation}/>
             }
         }
         
@@ -49,7 +49,7 @@ const CategoryMenuItemCard = ({cat}) =>{
 
 const styles = StyleSheet.create({
     container:{
-        marginVertical: 20,
+        marginBottom: 20
         
     }
 })

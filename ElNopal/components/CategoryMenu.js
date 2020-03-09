@@ -7,11 +7,11 @@ import CategoryMenuItemCard from './CategoryMenuItemCard';
 
 
 
-const CategoryMenu = ({cat}) =>{
+const CategoryMenu = ({cat, navigation}) =>{
     
     return (
     <View style={styles.categoryMenuContainer}>
-        <CategoryMenuItemCard cat={cat}/>
+        <CategoryMenuItemCard cat={cat} navigation={navigation}/>
 
             
         
@@ -22,7 +22,7 @@ const CategoryMenu = ({cat}) =>{
 
 const styles = StyleSheet.create({
     categoryMenuContainer:{
-        alignSelf: "center"
+        
     }
 })
 

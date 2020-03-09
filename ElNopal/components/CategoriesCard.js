@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
     cardImage:{
         alignSelf: "stretch",
         height: 160,
-        margin: 10,
+        marginVertical: 1,
         justifyContent: "center",
-        borderRadius: 20,
+        
         overflow: 'hidden'
     },
     text:{

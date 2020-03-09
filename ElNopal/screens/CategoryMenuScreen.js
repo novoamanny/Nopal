@@ -19,7 +19,7 @@ const CategoryMenuScreen = ({navigation}) =>{
     
     return (
         <Layout>
-            <CategoryMenu cat={cat} />
+            <CategoryMenu cat={cat} navigation={navigation}/>
         </Layout>
     )
 }
