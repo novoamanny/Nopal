@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         color: '#fff',
         fontSize: 30,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        
     }
 })
 

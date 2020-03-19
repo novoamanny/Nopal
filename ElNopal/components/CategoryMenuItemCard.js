@@ -18,7 +18,6 @@ const CategoryMenuItemCard = ({cat, navigation}) =>{
         if(cat === 'c1'){
             
             if(itemData.category === 'App'){
-                console.log(itemData)
                 return <MenuItem  item={itemData} navigation={navigation}/>
             }
         }
