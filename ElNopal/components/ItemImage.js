@@ -11,8 +11,11 @@ const ItemImage = ({image}) =>{
 
 const styles = StyleSheet.create({
     image:{
-        width: '100%',
-        height: Dimensions.get('window').width > 600 ? 380 : 280
+        width: Dimensions.get('window').width < 600 ? '100%' : '80%',
+        height: Dimensions.get('window').width > 600 ? 380 : 280,
+        alignSelf: Dimensions.get('window').width > 600 ? 'center' : 'stretch',
+        marginTop: Dimensions.get('window').width > 600 ? 10 : 0,
+        borderRadius: Dimensions.get('window').width > 600 ? 10 : 0
         
     }
 })

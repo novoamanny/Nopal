@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, ImageBackground, Text, StyleSheet, Image} from 'react-native'
+import {View, ImageBackground, Text, StyleSheet, Image, Dimensions} from 'react-native'
 
 const BannerImage = () =>{
     return(
@@ -16,12 +16,14 @@ const BannerImage = () =>{
 const styles = StyleSheet.create({
     bannerImage:{
         alignSelf: "stretch",
-        height: 250,
+        height: Dimensions.get('window').width < 600 ? 250 : 300,
+        
         
     },
     insideImage:{
-        width: 250,
-        height: 250,
+        width: Dimensions.get('window').width < 600 ? 250 : 300,
+        height: Dimensions.get('window').width < 600 ? 250 : 300,
+        
         alignSelf: "center"
         
     }

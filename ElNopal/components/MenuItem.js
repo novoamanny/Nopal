@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, Image, StyleSheet, TouchableOpacity, ImageBackground} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity, ImageBackground, Dimensions} from 'react-native';
 
 import {Colors} from '../constants/Colors';
 
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     image:{
         width: '100%',
-        height: 170,
+        height: Dimensions.get('window').width < 600 ? 170 : 250,
         justifyContent: 'flex-end',
         
         

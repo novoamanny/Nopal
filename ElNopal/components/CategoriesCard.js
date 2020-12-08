@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, Image, ImageBackground, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, Image, ImageBackground, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 
 
 
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     cardImage:{
         alignSelf: "stretch",
-        height: 160,
+        height: Dimensions.get('window').width < 600 ? 160 : 220,
         marginVertical: 1,
         justifyContent: "center",
         
