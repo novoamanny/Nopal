@@ -12,7 +12,7 @@ import HeaderImage from '../components/HeaderImage';
 const FavoritesScreen = () =>{
     return(
         <Layout>
-            <Text>Hello There Homie</Text>
+            <Text>Hello There</Text>
         </Layout>
     )
 }

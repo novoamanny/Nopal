@@ -32,7 +32,7 @@ const FavNavigator = createStackNavigator({
 
 // Nvigator Tabs config
 const tabsConfig = {
-    ElNopal: {
+    Nopal: {
         screen: ElNopalNavigator,
         navigationOptions:{
             tabBarIcon: (tabInfo) => <Ionicons name='ios-restaurant' size={20} color={tabInfo.tintColor}/>

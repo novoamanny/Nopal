@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image, StyleSheet, Dimensions} from 'react-native';
 
 
 const ItemImage = ({image}) =>{
@@ -12,7 +12,7 @@ const ItemImage = ({image}) =>{
 const styles = StyleSheet.create({
     image:{
         width: '100%',
-        height: 280,
+        height: Dimensions.get('window').width > 600 ? 380 : 280
         
     }
 })

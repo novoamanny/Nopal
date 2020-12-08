@@ -46,18 +46,18 @@ const ItemButtons = ({ navigation, itemID, itemName}) =>{
 
             <View style={styles.rowOne} >
                 <View style={styles.text}>
-                    <Text>Quantity:</Text>
+                    <Text style={{fontSize: 20}}>Quantity:</Text>
                 </View>
 
                 <View>
-                    <Text>{count}</Text>
+                    <Text style={{fontSize: 18, marginRight: 20}}>{count}</Text>
                 </View>
 
                 <TouchableOpacity style={styles.buttonAdd} onPress={() => SetCount(count + 1)}>
-                    <Icon name='plus' color={Colors.secondary} size={15}/>
+                    <Icon name='plus' color={Colors.secondary} size={20}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonMin} onPress={() => count === 0 ? null : SetCount(count - 1)}>
-                    <Icon name='minus' color={'red'} size={15}/>
+                    <Icon name='minus' color={'red'} size={20}/>
                 </TouchableOpacity>
         
                 
@@ -87,18 +87,18 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     text:{
-        marginHorizontal: 30
+        marginHorizontal: 30,
     },
     buttonAdd:{
         
         
         
-        marginHorizontal: 15
+        marginHorizontal: 20
     },
     buttonMin:{
         
         
-        marginHorizontal: 15
+        marginHorizontal: 20
     },
     addToOrderBtn:{
         alignSelf: "stretch",

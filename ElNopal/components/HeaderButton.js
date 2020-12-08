@@ -5,7 +5,7 @@ import {View, Text} from 'react-native';
 
 const HeaderButton = () =>{
     return(
-        <Text>Poopy!</Text>
+        <Text>!</Text>
     )
 }
 

@@ -8,9 +8,12 @@ import {Colors} from '../constants/Colors';
 const Layout = ({children}) =>{
     
     return(
-       <View style={styles.background}>
-           {children}
-       </View> 
+        
+            <View style={styles.background}>
+                {children}
+            </View> 
+        
+      
     )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import Layout from '../components/Layout';
 
 import {HeaderButtons, Item} from 'react-navigation-header-buttons';
@@ -19,13 +19,16 @@ const MenuItemScreen = ({navigation}) =>{
     const item = navigation.getParam('item');
 
     return(
-        <Layout>
-            <ItemImage image={item.image}/>
-            <ItemDesc desc={item.desc}/>
-            <ItemPrice price={item.price}/>
-            <ItemButtons navigation={navigation} itemID={item.id} itemName={item.title}/>
+        <ScrollView>
+            <Layout>
+                <ItemImage image={item.image}/>
+                <ItemDesc desc={item.desc}/>
+                <ItemPrice price={item.price}/>
+                <ItemButtons navigation={navigation} itemID={item.id} itemName={item.title}/>
             
-        </Layout>
+            </Layout>
+        </ScrollView>
+       
     )
 }
 
@@ -40,8 +43,9 @@ MenuItemScreen.navigationOptions = ({navigation}) =>{
         return {
           headerTitle: itemName,
           headerStyle:{
-              backgroundColor: Colors.secondary
+              backgroundColor: Colors.secondary,
           },
+          
           headerTintColor: '#fff',
           headerRight: () => <HeaderButtons HeaderButtonComponent={CustomHeaderButton} ><Item iconName='ios-star' onPress={() => console.log('FAV')}/></HeaderButtons>
         };

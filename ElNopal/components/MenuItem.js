@@ -10,7 +10,7 @@ const MenuItem = ({item, navigation}) =>{
         <TouchableOpacity style={styles.menuItemContainer} onPress={() => {
             navigation.push('MenuItem', {item: item});
         }}>
-            <ImageBackground style={styles.image} source={require('../images/desert.jpeg')}>
+            <ImageBackground style={styles.image} source={item.image}>
                 <View style={{backgroundColor: 'rgba(47,47,47, 0.7)'}}>
                     <View style={''}>
                         <Text style={styles.text}>{item.title}</Text>

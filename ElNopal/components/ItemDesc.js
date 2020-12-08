@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Dimensions} from 'react-native';
 
 const ItemDesc = ({desc}) =>{
     return(
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     text:{
         color: '#2f2f2f',
         textAlign: 'center',
-        fontSize: 16
+        fontSize: Dimensions.get('window').width > 600 ? 20 : 16
     }
 })
 

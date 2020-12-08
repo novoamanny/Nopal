@@ -5,7 +5,9 @@ import ElNopalNavigator from './navigation/ElNopalNavigator';
 
 export default function App() {
   return (
+    
     <ElNopalNavigator/>
+    
   );
 }
 

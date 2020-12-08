@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Platform} from 'react-native';
 import Layout from '../components/Layout'
 
 import HeaderImage from '../components/HeaderImage';
@@ -23,6 +23,7 @@ const StartScreen = ({navigation}) =>{
 StartScreen.navigationOptions = {
     headerTitle: () => <HeaderImage/>,
     headerStyle:{
+        // backgroundColor: Platform.OS === 'android' ? '#00b300' : '#2f2f2f'
         backgroundColor: '#00b300'
     }
     
