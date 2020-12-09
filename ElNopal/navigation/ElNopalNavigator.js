@@ -36,6 +36,7 @@ const tabsConfig = {
         screen: ElNopalNavigator,
         navigationOptions:{
             tabBarIcon: (tabInfo) => <Ionicons name='ios-restaurant' size={20} color={tabInfo.tintColor}/>
+            
         }
     },
     Favorites: {
@@ -54,18 +55,50 @@ const ElNopalTabs = createBottomTabNavigator(
             inactiveBackgroundColor: '#fff',
             activeBackgroundColor: Colors.secondary,
             activeTintColor: '#fff',
-            
-    }
-}
+        },
+        // navigationOptions:{
+        //     drawerLabel: 'El Nopal'
+        // }
+    }   
 )
 
-const FilterNavigator = createStackNavigator({
-    Filter: FilterScreen
-})
+const FilterNavigator = createStackNavigator(
+    {
+   
+        Filter:{
+            screen: FilterScreen,
+        },
+    
+    },
+    // {
+    //     navigationOptions:{
+    //         drawerLabel: 'Filter'
+    //     }
+    // }
+)
 
 const MainNavigator = createDrawerNavigator({
-    Nav: ElNopalTabs,
-    Filter: FilterNavigator
-})
+    NopalNav:{
+        screen: ElNopalTabs,
+        navigationOptions:{
+            drawerLabel: 'El Nopal'
+        }
+    },
+    Filter: {
+        screen: FilterNavigator,
+        navigationOptions:{
+            drawerLabel: 'Filter'
+        }
+    },
+  
+},
+    {
+        contentOptions: {
+            activeTintColor: Colors.primary,
+            activeBackgroundColor: Colors.secondary,
+            
+        }
+    }
+)
 
 export default createAppContainer(MainNavigator);
